@@ -68,10 +68,10 @@ $(document).ready(function() {
   // Block#: 30
   function on_Button2_click() {
     try {
-      // Block#: 222
+      // Block#: 31
       com.fc.JavaScriptDistLib.Image.createImageFromUrl('http://www.pngmart.com/files/2/Mario-Transparent-Background.png',
         function(image) {
-          // Block#: 31
+          // Block#: 33
           com.fc.JavaScriptDistLib.Screen.setProperty["Background image"]("MainScreen", image);
         });
     } catch(e) {
@@ -79,10 +79,10 @@ $(document).ready(function() {
     }
   };
   $('[obj-name="Button2"]').on('click', on_Button2_click);
-  // Block#: 43
+  // Block#: 35
   function on_Button7_click() {
     try {
-      // Block#: 44
+      // Block#: 36
       let hideScreen = $('.HTML5-deploy-wrapper .Screen:visible');
       hideScreen.hide();
       let showScreen = $('[obj-name="Screen2"]');
@@ -97,11 +97,11 @@ $(document).ready(function() {
     }
   };
   $('[obj-name="Button7"]').on('click', on_Button7_click);
-  // Block#: 33
+  // Block#: 37
   function on_Button4_click() {
     try {
-      // Block#: 34
-      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen") + 50)); // Block#: 38
+      // Block#: 38
+      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen") + 50)); // Block#: 42
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label6", (String('HEIGHT :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
@@ -126,22 +126,22 @@ $(document).ready(function() {
     }
   };
   $('[obj-name="Button13"]').on('click', on_Button13_click);
-  // Block#: 61
+  // Block#: 49
   function on_screen_showScreen2() {
     try {
-      // Block#: 62
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'Screen2 shown!'); // Block#: 64
-      com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen2", '#33ff33'); // Block#: 185
+      // Block#: 50
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'Screen2 shown!'); // Block#: 52
+      com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen2", '#33ff33'); // Block#: 54
       com.fc.JavaScriptDistLib.Screen.setProperty["Background image"]("Screen2", ('https://local.snapp.click/api/v2/raws/projects/resources/126ec9fc-9f80-44e6-b9c3-bee3c0f45e9e'));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   $('[obj-name="Screen2"]').on('show', on_screen_showScreen2);
-  // Block#: 45
+  // Block#: 56
   function on_Button9_click() {
     try {
-      // Block#: 46
+      // Block#: 57
       let hideScreen = $('.HTML5-deploy-wrapper .Screen:visible');
       hideScreen.hide();
       let showScreen = $('[obj-name="Screen3"]');
@@ -156,10 +156,10 @@ $(document).ready(function() {
     }
   };
   $('[obj-name="Button9"]').on('click', on_Button9_click);
-  // Block#: 49
+  // Block#: 58
   function on_Button14_click() {
     try {
-      // Block#: 50
+      // Block#: 59
       let hideScreen = $('.HTML5-deploy-wrapper .Screen:visible');
       hideScreen.hide();
       let showScreen = $('[obj-name="MainScreen"]');
@@ -174,174 +174,174 @@ $(document).ready(function() {
     }
   };
   $('[obj-name="Button14"]').on('click', on_Button14_click);
-  // Block#: 51
+  // Block#: 60
   function on_Button10_click() {
     try {
-      // Block#: 52
-      com.fc.JavaScriptDistLib.Screen.setProperty["width"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["width"]("MainScreen") - 50)); // Block#: 56
+      // Block#: 61
+      com.fc.JavaScriptDistLib.Screen.setProperty["width"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["width"]("MainScreen") - 50)); // Block#: 65
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label5", (String('WIDTH :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["width"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
     }
   };
   $('[obj-name="Button10"]').on('click', on_Button10_click);
-  // Block#: 66
+  // Block#: 70
   function on_screen_showScreen3() {
     try {
-      // Block#: 67
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label11", 'Screen3 shown!'); // Block#: 69
+      // Block#: 71
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label11", 'Screen3 shown!'); // Block#: 73
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen3", '#33ffff');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   $('[obj-name="Screen3"]').on('show', on_screen_showScreen3);
-  // Block#: 71
+  // Block#: 75
   function on_screen_hideScreen2() {
     try {
-      // Block#: 72
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'Screen2 has been hidden'); // Block#: 74
+      // Block#: 76
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'Screen2 has been hidden'); // Block#: 78
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen2", '#ff6666');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   $('[obj-name="Screen2"]').on('hide', on_screen_hideScreen2);
-  // Block#: 76
+  // Block#: 80
   function on_Button8_click() {
     try {
-      // Block#: 77
-      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen") - 50)); // Block#: 81
+      // Block#: 81
+      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen") - 50)); // Block#: 85
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label6", (String('HEIGHT :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["height"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
     }
   };
   $('[obj-name="Button8"]').on('click', on_Button8_click);
-  // Block#: 86
+  // Block#: 90
   let on_screen_back_button_pressScreen4 = function() {
     try {
-      // Block#: 87
-      com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen4", '#ffffff'); // Block#: 89
+      // Block#: 91
+      com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen4", '#ffffff'); // Block#: 93
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label13", 'BACK BUTTON PRESSED');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   com.fc.JavaScriptDistLib.Screen.screenDict['backScreen4'] = on_screen_back_button_pressScreen4;
-  // Block#: 91
+  // Block#: 95
   function on_screen_showScreen4() {
     try {
-      // Block#: 92
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'Screen4 shown!'); // Block#: 94
+      // Block#: 96
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'Screen4 shown!'); // Block#: 98
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen4", '#cc66cc');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   $('[obj-name="Screen4"]').on('show', on_screen_showScreen4);
-  // Block#: 96
+  // Block#: 100
   function on_Button5_click() {
     try {
-      // Block#: 97
-      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen") + 50)); // Block#: 101
+      // Block#: 101
+      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen") + 50)); // Block#: 105
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label7", (String('X :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
     }
   };
   $('[obj-name="Button5"]').on('click', on_Button5_click);
-  // Block#: 106
+  // Block#: 110
   function on_screen_hideScreen4() {
     try {
-      // Block#: 107
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'Screen4 has been hidden'); // Block#: 109
+      // Block#: 111
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'Screen4 has been hidden'); // Block#: 113
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen4", '#333399');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   $('[obj-name="Screen4"]').on('hide', on_screen_hideScreen4);
-  // Block#: 111
+  // Block#: 115
   function on_screen_orientation_changeMainScreen(new_orientation) {
     try {
-      // Block#: 112
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label9", 'ORIENTATION CHANGED: RESET all properties! '); // Block#: 201
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label5", 'WIDTH'); // Block#: 203
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label6", 'HEIGHT'); // Block#: 205
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label7", 'X'); // Block#: 207
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label8", 'Y'); // Block#: 114
-      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", 172); // Block#: 116
-      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", 100); // Block#: 118
-      com.fc.JavaScriptDistLib.Screen.setProperty["width"]("MainScreen", 480); // Block#: 120
-      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", 800); // Block#: 122
-      com.fc.JavaScriptDistLib.Screen.setProperty["Background image"]("MainScreen", ('img/blank_image.svg')); // Block#: 124
+      // Block#: 116
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label9", 'ORIENTATION CHANGED: RESET all properties! '); // Block#: 118
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label5", 'WIDTH'); // Block#: 120
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label6", 'HEIGHT'); // Block#: 122
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label7", 'X'); // Block#: 124
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label8", 'Y'); // Block#: 126
+      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", 172); // Block#: 128
+      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", 100); // Block#: 130
+      com.fc.JavaScriptDistLib.Screen.setProperty["width"]("MainScreen", 480); // Block#: 132
+      com.fc.JavaScriptDistLib.Screen.setProperty["height"]("MainScreen", 800); // Block#: 134
+      com.fc.JavaScriptDistLib.Screen.setProperty["Background image"]("MainScreen", ('img/blank_image.svg')); // Block#: 136
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("MainScreen", '#ffffff');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   com.fc.JavaScriptDistLib.Screen.screenDict['orientationMainScreen'] = on_screen_orientation_changeMainScreen;
-  // Block#: 126
+  // Block#: 138
   function on_Button6_click() {
     try {
-      // Block#: 127
-      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen") + 50)); // Block#: 131
+      // Block#: 139
+      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen") + 50)); // Block#: 143
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label8", (String('Y :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
     }
   };
   $('[obj-name="Button6"]').on('click', on_Button6_click);
-  // Block#: 136
+  // Block#: 148
   function on_screen_orientation_changeScreen2(new_orientation) {
     try {
-      // Block#: 137
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 139
+      // Block#: 149
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label10", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 151
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen2", '#ffffff');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   com.fc.JavaScriptDistLib.Screen.screenDict['orientationScreen2'] = on_screen_orientation_changeScreen2;
-  // Block#: 141
+  // Block#: 153
   function on_screen_orientation_changeScreen3(new_orientation) {
     try {
-      // Block#: 142
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label11", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 144
+      // Block#: 154
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label11", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 156
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen3", '#ffffff');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   com.fc.JavaScriptDistLib.Screen.screenDict['orientationScreen3'] = on_screen_orientation_changeScreen3;
-  // Block#: 146
+  // Block#: 158
   function on_Button11_click() {
     try {
-      // Block#: 147
-      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen") - 0)); // Block#: 151
+      // Block#: 159
+      com.fc.JavaScriptDistLib.Screen.setProperty["x"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen") - 0)); // Block#: 163
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label7", (String('X :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["x"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
     }
   };
   $('[obj-name="Button11"]').on('click', on_Button11_click);
-  // Block#: 156
+  // Block#: 168
   function on_screen_orientation_changeScreen4(new_orientation) {
     try {
-      // Block#: 157
-      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 159
+      // Block#: 169
+      com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label12", 'ORIENTATION CHANGED:  RESET all properties! '); // Block#: 171
       com.fc.JavaScriptDistLib.Screen.setProperty["Background color"]("Screen3", '#ffffff');
     } catch(e) {
       com.fc.JavaScriptDistLib.handleException(e);
     }
   };
   com.fc.JavaScriptDistLib.Screen.screenDict['orientationScreen4'] = on_screen_orientation_changeScreen4;
-  // Block#: 161
+  // Block#: 173
   function on_Button12_click() {
     try {
-      // Block#: 162
-      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen") - 50)); // Block#: 166
+      // Block#: 174
+      com.fc.JavaScriptDistLib.Screen.setProperty["y"]("MainScreen", (com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen") - 50)); // Block#: 178
       com.fc.JavaScriptDistLib.Label.setProperty["Text"]("Label8", (String('Y :  ') + String(com.fc.JavaScriptDistLib.TextLib.convertToText(com.fc.JavaScriptDistLib.Screen.getProperty["y"]("MainScreen")))));
     } catch(e) {
       com.fc.JavaScriptDistLib.handleExceptionNative(e);
@@ -353,4 +353,4 @@ $(document).ready(function() {
   $('[obj-name="MainScreen"]').show();
 });
 // Generated by snapp
-// 144508-618397-44264-18582
+// 33900-692611-394985-481720
