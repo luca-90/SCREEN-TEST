@@ -95,13 +95,10 @@ class BaseObject {
             },
             x: (objName) => {
                 var elem = this.getElemFromName(objName);
-                console.log('x-get: '+ parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[0], 10))
                 return Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[0], 10));  // elem.css('transform').split(',')[4])
             },
             y: (objName) => {
                 var elem = this.getElemFromName(objName);
-                console.log('y-get: '+ parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[1], 10))
-
                 return Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[1], 10));  // elem.css('transform').split(',')[5])
             },
             Alpha: (objName) => {
@@ -134,13 +131,11 @@ class BaseObject {
             x: (objName, value) => {
                 var elem = this.getElemFromName(objName);
                 var yPos = Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[1], 10)); // elem.css('transform').split(',')[5])
-                console.log('x-set: '+ yPos+' v '+value)
                 elem.css('transform', 'translate(' + value + 'px,' + yPos + 'px)');
             },
             y: (objName, value) => {
                 var elem = this.getElemFromName(objName);
                 var xPos = Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[0], 10)); // elem.css('transform').split(',')[4])
-                console.log('y-set: '+ xPos +' v '+value)
                 elem.css('transform', 'translate(' + xPos + 'px,' + value + 'px)');
             },
             Alpha: (objName, value) => {
@@ -266,7 +261,7 @@ class TextObject extends __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_mo
                 this.getTextElemFromName(objName).css('font-style',value.toLowerCase());
             },
             'Font family': (objName, value) => {
-                this.getTextElemFromName(objName).css('font-style',value.toLowerCase());
+                this.getTextElemFromName(objName).css('font-family',value.toLowerCase());
             },
             'Background color': (objName, value) => {
                 this.getTextElemFromName(objName).css('background-color',value);
