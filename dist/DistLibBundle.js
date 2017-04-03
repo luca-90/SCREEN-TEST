@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,131 +71,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/** @module B BaseObject*/
-
-/**
- * Web Apps Javascript Distribution Library
- * Base implementation for the User Object
- *
- */
-class BaseObject {
-
-    constructor() {
-        /**
-         * Set of getProperty functions
-         * the object key is the property name to be set/get
-         *
-         */
-        this.getProperty = {
-            width: (objName) => {
-                return this.getElemFromName(objName).width();
-            },
-            height: (objName) => {
-                return this.getElemFromName(objName).height();
-            },
-            x: (objName) => {
-                var elem = this.getElemFromName(objName);
-                return Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[0], 10));  // elem.css('transform').split(',')[4])
-            },
-            y: (objName) => {
-                var elem = this.getElemFromName(objName);
-                return Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[1], 10));  // elem.css('transform').split(',')[5])
-            },
-            Alpha: (objName) => {
-                return this.getElemFromName(objName).css('opacity');
-            },
-            'Background color': (objName) => {
-                return this.getElemFromName(objName).css('background-color');
-            },
-            'Horizontal scroll': (objName) => {
-                return this.getElemFromName(objName).css('overflow-x');
-            },
-            'Vertical scroll': (objName) => {
-                return this.getElemFromName(objName).css('overflow-y');
-            },
-
-        };
-
-        /**
-         * Set of setProperty functions
-         * the object key is the property name to be set/get
-         *
-         */
-        this.setProperty = {
-            width: (objName, value) => {
-                this.getElemFromName(objName).css('width', value + 'px');
-            },
-            height: (objName, value) => {
-                this.getElemFromName(objName).css('height', value + 'px');
-            },
-            x: (objName, value) => {
-                var elem = this.getElemFromName(objName);
-                var yPos = Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[1], 10)); // elem.css('transform').split(',')[5])
-                elem.css('transform', 'translate(' + value + 'px,' + yPos + 'px)');
-            },
-            y: (objName, value) => {
-                var elem = this.getElemFromName(objName);
-                var xPos = Math.round(parseFloat(($(elem)[0].style.transform.split('(')[1].split(')')[0].split(','))[0], 10)); // elem.css('transform').split(',')[4])
-                elem.css('transform', 'translate(' + xPos + 'px,' + value + 'px)');
-            },
-            Alpha: (objName, value) => {
-                this.getElemFromName(objName).css('opacity', value/100 );
-            },
-            'Background color': (objName, value) => {
-                this.getElemFromName(objName).css('background-color', value);
-            },
-            'Horizontal scroll': (objName, value) => {
-                this.getElemFromName(objName).css('overflow-x', 'hidden');
-                if (value) this.getElemFromName(objName).css('overflow-x', 'scroll');
-            },
-            'Vertical scroll': (objName, value) => {
-                this.getElemFromName(objName).css('overflow-y', 'hidden');
-                if (value) this.getElemFromName(objName).css('overflow-y', 'scroll');
-            },
-
-        };
-    }
-
-    /**
-     * Retrieves the element with a given object-name attribute
-     * @param objName
-     * @returns {*|jQuery|HTMLElement}
-     */
-    getElemFromName (objName) {
-        return $('[obj-name= "' + objName + '"]');
-    }
-
-    /**
-     * Generic removeGesture block implementation
-     * @param objName
-     * @param gesture
-     */
-    removeGesture (objName, gesture) {
-        try {
-            var elem = this.getElemFromName(objName);
-            switch (gesture) {
-                case "CLICK":
-                    return elem.unbind('click');
-                    break;
-            }
-        } catch (e) {
-            throw(e);
-        }
-    }
-
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (BaseObject);
-
-
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_module_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_module_js__ = __webpack_require__(6);
 // ES6 imports
 
 
@@ -287,18 +163,18 @@ class TextObject extends __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_mo
 
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (TextObject);
+/* harmony default export */ __webpack_exports__["a"] = TextObject;
 
 
 
 
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_module_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_module_js__ = __webpack_require__(0);
 // ES6 imports
 
 
@@ -309,11 +185,11 @@ class ButtonObject extends __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_
 }
 
 // ES6 exports
-/* harmony default export */ __webpack_exports__["a"] = (ButtonObject);
+/* harmony default export */ __webpack_exports__["a"] = ButtonObject;
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -627,10 +503,10 @@ class ConnioObject extends com.fc.JavaScriptDistLib.ConnioCore {
 }
 
 // ES6 exports
-/* harmony default export */ __webpack_exports__["a"] = (ConnioObject);
+/* harmony default export */ __webpack_exports__["a"] = ConnioObject;
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -726,16 +602,16 @@ class JsonObject {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (JsonObject);
+/* harmony default export */ __webpack_exports__["a"] = JsonObject;
 
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_module_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_module_js__ = __webpack_require__(0);
 // ES6 imports
 
 
@@ -766,10 +642,10 @@ class LabelObject extends __WEBPACK_IMPORTED_MODULE_0__text_object_text_object_m
 }
 
 // ES6 exports
-/* harmony default export */ __webpack_exports__["a"] = (LabelObject);
+/* harmony default export */ __webpack_exports__["a"] = LabelObject;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -887,7 +763,131 @@ class NetworkObject {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (NetworkObject);
+/* harmony default export */ __webpack_exports__["a"] = NetworkObject;
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/** @module B BaseObject*/
+
+/**
+ * Web Apps Javascript Distribution Library
+ * Base implementation for the User Object
+ *
+ */
+class BaseObject {
+
+    constructor() {
+        /**
+         * Set of getProperty functions
+         * the object key is the property name to be set/get
+         *
+         */
+        this.getProperty = {
+            width: (objName) => {
+                return this.getElemFromName(objName).width();
+            },
+            height: (objName) => {
+                return this.getElemFromName(objName).height();
+            },
+            x: (objName) => {
+                var elem = this.getElemFromName(objName);
+                return Math.round(parseFloat(elem.css('transform').split(',')[4]));
+            },
+            y: (objName) => {
+                var elem = this.getElemFromName(objName);
+                return Math.round(parseFloat(elem.css('transform').split(',')[5]));
+            },
+            Alpha: (objName) => {
+                return this.getElemFromName(objName).css('opacity');
+            },
+            'Background color': (objName) => {
+                return this.getElemFromName(objName).css('background-color');
+            },
+            'Horizontal scroll': (objName) => {
+                return this.getElemFromName(objName).css('overflow-x');
+            },
+            'Vertical scroll': (objName) => {
+                return this.getElemFromName(objName).css('overflow-y');
+            },
+
+        };
+
+        /**
+         * Set of setProperty functions
+         * the object key is the property name to be set/get
+         *
+         */
+        this.setProperty = {
+            width: (objName, value) => {
+                this.getElemFromName(objName).css('width', value + 'px');
+            },
+            height: (objName, value) => {
+                this.getElemFromName(objName).css('height', value + 'px');
+            },
+            x: (objName, value) => {
+                var elem = this.getElemFromName(objName);
+                var yPos = Math.round(parseFloat(elem.css('transform').split(',')[5]));
+                elem.css('transform', 'translate(' + value + 'px,' + yPos + 'px)');
+            },
+            y: (objName, value) => {
+                var elem = this.getElemFromName(objName);
+                var xPos = Math.round(parseFloat(elem.css('transform').split(',')[4]));
+                elem.css('transform', 'translate(' + xPos + 'px,' + value + 'px)');
+            },
+            Alpha: (objName, value) => {
+                this.getElemFromName(objName).css('opacity', value/100 );
+            },
+            'Background color': (objName, value) => {
+                this.getElemFromName(objName).css('background-color', value);
+            },
+            'Horizontal scroll': (objName, value) => {
+                this.getElemFromName(objName).css('overflow-x', 'hidden');
+                if (value) this.getElemFromName(objName).css('overflow-x', 'scroll');
+            },
+            'Vertical scroll': (objName, value) => {
+                this.getElemFromName(objName).css('overflow-y', 'hidden');
+                if (value) this.getElemFromName(objName).css('overflow-y', 'scroll');
+            },
+
+        };
+    }
+
+    /**
+     * Retrieves the element with a given object-name attribute
+     * @param objName
+     * @returns {*|jQuery|HTMLElement}
+     */
+    getElemFromName (objName) {
+        return $('[obj-name= "' + objName + '"]');
+    }
+
+    /**
+     * Generic removeGesture block implementation
+     * @param objName
+     * @param gesture
+     */
+    removeGesture (objName, gesture) {
+        try {
+            var elem = this.getElemFromName(objName);
+            switch (gesture) {
+                case "CLICK":
+                    return elem.unbind('click');
+                    break;
+            }
+        } catch (e) {
+            throw(e);
+        }
+    }
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = BaseObject;
+
+
 
 
 /***/ }),
@@ -895,111 +895,13 @@ class NetworkObject {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_module_js__ = __webpack_require__(0);
-/**
- * Created by Luca Latini on 27/03/17.
- */
-
-// ES6 imports
-
-
-class ScreenObject extends __WEBPACK_IMPORTED_MODULE_0__base_object_base_object_module_js__["a" /* default */] {
-
-    constructor(elemSelectorRef) {
-        super();
-
-        // Element selector
-        this.elemSelectorRef = elemSelectorRef || '';
-
-        var self = this;
-
-        // Getting Text properties values
-
-        this.getProperty = Object.assign(this.getProperty, {
-            'Background image': (objName) => {
-                return this.getScreenElemFromName(objName).css('background-image');
-            }
-        });
-
-        this.setProperty = Object.assign(this.setProperty, {
-            'Background image': (objName, value) => {
-                return this.getScreenElemFromName(objName).css('background-image', "url(\'" + value + "\')");
-            }
-        });
-
-        this.screenDict = {};
-    };
-
-    /**
-     * Retrieves the screen element with a given object-name attribute
-     * @param objName
-     * @returns {*|jQuery|HTMLElement}
-     */
-    getScreenElemFromName (objName) {
-        return $('[obj-name= "' + objName + '"]' + this.elemSelectorRef);
-    }
-
-    init ( elemSelectorRefValue) {
-        this.elemSelectorRef = elemSelectorRefValue;
-    };
-
-    screenPopInit () {
-        const self = this.screenDict;
-        window.addEventListener('popstate', function (e) {
-            let currentScreen = $('.HTML5-deploy-wrapper .Screen:visible');
-            let currentScreenName = currentScreen[0].getAttribute('obj-name');
-            let callbackScreen =  'back' + currentScreenName;
-               if (self[callbackScreen]) {
-                   history.pushState({'view': currentScreenName}, currentScreenName, currentScreenName);
-                   self[callbackScreen]();
-              }  else {
-                  currentScreen.hide();
-                  $('[obj-name="' + e.state.view + '"]').show();
-                }
-        });
-    };
-
-    screenOrientationInit () {
-        const self = this.screenDict;
-        window.addEventListener( 'orientationchange', function( e ) {
-            let currentScreen = $('.HTML5-deploy-wrapper .Screen:visible');
-            let currentScreenName = currentScreen[0].getAttribute('obj-name');
-            let callbackScreen = 'orientation' + currentScreenName;
-            if (self[callbackScreen]) {
-                let getOrientation = '';
-                switch(window.orientation) {
-                    case -90:
-                    case 90:
-                        getOrientation = 'landscape';
-                        break;
-                    default:
-                        getOrientation = 'portrait';
-                        break;
-                }
-                self[callbackScreen](getOrientation);
-            }
-        });
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (ScreenObject);
-
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__objects_label_label_module_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__objects_button_button_module_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objects_network_network_module_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__objects_json_json_module_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__objects_connio_connio_module_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__objects_screen_screen_module_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__objects_label_label_module_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__objects_button_button_module_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objects_network_network_module_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__objects_json_json_module_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__objects_connio_connio_module_js__ = __webpack_require__(2);
 // ES6 imports
-
 
 
 
@@ -1013,7 +915,6 @@ distLib.Button = new __WEBPACK_IMPORTED_MODULE_1__objects_button_button_module_j
 distLib.Network = new __WEBPACK_IMPORTED_MODULE_2__objects_network_network_module_js__["a" /* default */]();
 distLib.JSON = new __WEBPACK_IMPORTED_MODULE_3__objects_json_json_module_js__["a" /* default */]();
 distLib.Connio = new __WEBPACK_IMPORTED_MODULE_4__objects_connio_connio_module_js__["a" /* default */]();
-distLib.Screen = new __WEBPACK_IMPORTED_MODULE_5__objects_screen_screen_module_js__["a" /* default */]();
 
 // setting the global variable
 com = com || {};
